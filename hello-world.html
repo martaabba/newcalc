@@ -1,62 +1,43 @@
 <!DOCTYPE html>
-<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+
 <html lang="en-us">
 
-<head>
-<meta charset="utf-8">
-<title>Hello...</title>
-<style type="text/css">
-#mainContent {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: xx-large;
-	font-weight: bold;
-	background-color: #E3F0FB;
-	border-radius: 4px;
-	padding: 10px;
-	text-align: center;
-}
-.buttonStyle {
-	border-radius: 4px;
-	border: thin solid #F0E020;
-	padding: 5px;
-	background-color: #F8F094;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	color: #663300;
-	width: 75px;
-}
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Calculator</title>
+	</head>
+	<body>
+  		<form name="calculator">
+  			<table>
+  				<tr>
+  					<td colspan="4">
+  						<input type="text" name="display" disabled>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td><input type="button" name="seven" value="7" onclick="calculator.display.value +='7'"></td>
+  					<td><input type="button" name="eight" value="8" onclick="calculator.display.value +='8'"></td>
+  					<td><input type="button" name="nine" value="9" onclick="calculator.display.value +='9'"></td>
+  				</tr>
+  				
+  				<tr>
+  					<td><input type="button" name="four" value="4" onclick="calculator.display.value +='4'"></td>
+  					<td><input type="button" name="five" value="5" onclick="calculator.display.value +='5'"></td>
+  					<td><input type="button" name="six" value="6" onclick="calculator.display.value +='6'"></td>
+  				</tr>
+  				<tr>
+  					<td><input type="button" name="one" value="1" onclick="calculator.display.value +='1'"></td>
+  					<td><input type="button" name="two" value="2" onclick="calculator.display.value +='2'"></td>
+  					<td><input type="button" name="three" value="3" onclick="calculator.display.value +='3'"></td>
+  				</tr>
+  				
+  			</table>
+  		</form>
 
-.buttonStyle:hover {
-	border: thin solid #FFCC00;
-	background-color: #FCF9D6;
-	color: #996633;
-	cursor: pointer;
-}
-.buttonStyle:active {
-	border: thin solid #99CC00;
-	background-color: #F5FFD2;
-	color: #669900;
-	cursor: pointer;
-}
+	</body>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src"js/scripts.js">
 
-</style>
-</head>
-
-<body>
-<div id="mainContent">
-<p id="helloText">?</p>
-<button id="clickButton" class="buttonStyle">click me</button>
-</div>
-<script> 
-var myButton = document.getElementById("clickButton");
-var myText = document.getElementById("helloText");
-
-myButton.addEventListener('click', doSomething, false)
-
-function doSomething() {
-	myText.textContent = "hello, world!";
-}
-</script>
-
-</body>
 </html>
